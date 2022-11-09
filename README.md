@@ -1,6 +1,24 @@
-# myWebDevEx
+## myWebDevEx
 Web应用练习
 
+## 案例：Demo论文
+1) FastAPI + Vue + Bootstrap  
+{UKP}-{SQ}u{ARE}: An Online Platform for Question Answering Research   ACL22Demo
+2) Flask/Python + Exrpress/NodeJS  + Bootstrap  
+ParaQG: A System for Generating Questions and Answers from Paragraphs, EMNLP19  
+
+## 案例：FastAPI/Python + Electron  
+1) 启动FastAPI，
+2) 启动Electron Fiddle，Show me，Web contents
+3) 修改代码，去掉定时超时任务，改为
+```JavaScript
+const contents = webContents.getAllWebContents()[0]
+const options = { extraHeaders: 'pragma: no-cache\n' }
+contents.loadURL('http://127.0.0.1:8000', options)
+```
+4) HTTP命令，启动Electron Fiddle，Show me，Net
+可以看到如何从WebAPI获得数据
+5) 把BrowserWindow和Net结合，生成可视化结果。
 
 ## FastAPI  使用PyCharm
 配置FastAPI，打开main.py，打开运行的edit configuration，选择FastAPI项目，选择main.py，名字随意。   
@@ -17,6 +35,7 @@ web部分参考：Starlette
 Pydantic提供:  
 ujson - 更快的JSON  
 email_validator - 电子邮件的验证   
+
 Starlette提供:  
 requests - 如果你想要使用TestClient, 需要导入requests.  
 aiofiles - 如果你想使用FileResponseor StaticFiles, 需要导入aiofiles.  
